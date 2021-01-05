@@ -10,13 +10,37 @@
     <!-- السؤال الثاني -->
     <!-- consoleبهذا التمرين راح نعتمد على ال -->
 
+
+
     <script>
+
+
+            let cat = { 
+            name : "meme" ,
+            age : 3 ,
+            
+            sulala : "null"
+             }
+             
+             console.log(cat);
+        console.log(cat.age)
+        cat.emoji = `🐈`;
+        console.log(cat.emoji);
+
+
+
       // 1
       /* objects تحتوي على array قم بتعريف
          drivers <= arrayسمي ال
          لكل سائق object <= arrayحط داخل ال
          حط اسم السائق وعمره object داخل كل
       */
+      let drivers = [
+        {name: "Bob", age: 30},
+        {name: "John", age: 36},
+        {name: "Mike", age: 17},
+      ];
+
 
       // 2
       /* licenseTest() اسمها function قم بتعريف
@@ -24,6 +48,21 @@
          اطبع "تفضل/ي رخصتك يا ..." <= لو عمر السائق 18 أو أكثر
                           اطبع "نعتذر منك، المرة الياية إن شاء الله" <= لو أصغر
       */
+     function licenseTest(){  
+for (let index = 0; index < drivers.length; index++) {
+  const element = drivers[index];
+  console.log(element.age);
+  if(element.age > 18) {
+    console.log(`welcome ${element.name} here is your license` )
+  }
+  else{
+    console.log(`we apologise to you, try again next time`)
+  }
+
+}
+     }
+
+     licenseTest()
 
       // onclick انتبه إنه إحنا مو قاعدين نستخدم زر يعني ما نقدر نستخدم
     </script>
